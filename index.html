@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QR Code Styling</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"
+    ></script>
+  </head>
+  <body>
+    <div id="qr-code-container"></div>
+    <div id="canvas"></div>
+    <div class="card">
+      <h1>URl do site</h1>
+      <input
+        type="text"
+        placeholder="Sua URL"
+        onchange="changeSelect(this,'data')"
+      />
+    </div>
+    <div class="card">
+      <h1>Dot Options</h1>
+      <select
+        name=""
+        id="dotOptionsSelectType"
+        onchange="changeSelect(this,'dotOptionsSelectType')"
+        class="select"
+      >
+        <option value="square">Quadrado</option>
+        <option value="dots">Pontilhado</option>
+        <option value="rounded">Arredondado</option>
+        <option value="extra-rounded">Super Arredondado</option>
+        <option value="classy">Estilizado</option>
+        <option value="classy-rounded">Super Estilizado</option>
+      </select>
+      <input
+        type="color"
+        value="#000000"
+        class="input-color"
+        onchange="changeSelect(this,'dotOptionsSelectColor')"
+      />
+    </div>
+    <div class="card">
+      <h1>Canto</h1>
+      <select
+        name=""
+        id="cornersSquareOptionsSelectType"
+        onchange="changeSelect(this,'cornersSquareOptionsSelectType')"
+      >
+        <option value="square">Quadrado</option>
+        <option value="dot">Pontos</option>
+        <option value="extra-rounded">Super arrendado</option>
+      </select>
+      <input
+        type="color"
+        class="input-color"
+        value="#000000"
+        onchange="changeSelect(this,'cornersSquareOptionsSelectColor')"
+      />
+    </div>
+    <button id="generate-button">Go!</button>
+    <script src="app.js"></script>
+  </body>
+</html>
